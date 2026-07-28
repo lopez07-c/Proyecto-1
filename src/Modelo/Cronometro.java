@@ -9,7 +9,7 @@ package Modelo;
  * @author UTN
  */
 public class Cronometro {
-     // Atributos
+     
     private long tiempoInicio;
     private long tiempoFin;
     private boolean ejecutando;
@@ -28,7 +28,7 @@ public class Cronometro {
         this.ejecutando = ejecutando;
     }
 
-    // Getters y Setters
+  
 
     public long getTiempoInicio() {
         return tiempoInicio;

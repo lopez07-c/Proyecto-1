@@ -47,9 +47,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         }
     });
 
-    /**
-     * Crea la ventana de juego para el nivel indicado.
-     */
+    
     public VentanaJuego(Modelo.Nivel nivel) {
         initComponents();
         
@@ -134,7 +132,7 @@ public class VentanaJuego extends javax.swing.JFrame {
             final int fila = f;
             final int columna = c;
 
-            // Quitar listeners anteriores
+           
             for (ActionListener al : boton.getActionListeners()) {
                 boton.removeActionListener(al);
             }

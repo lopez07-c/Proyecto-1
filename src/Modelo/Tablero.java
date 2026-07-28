@@ -17,7 +17,7 @@ package Modelo;
     private int columnas;
     private int totalParejas;
 
-    // Constructor con parámetros
+    
     public Tablero(int filas, int columnas) {
         this.filas = filas;
         this.columnas = columnas;
@@ -25,7 +25,7 @@ package Modelo;
         this.CartasTablero = new Carta[filas][columnas];
     }
 
-    // Getters y Setters
+   
     public Carta[][] getTablero() {
         return CartasTablero;
     }

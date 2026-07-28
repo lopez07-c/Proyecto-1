@@ -24,7 +24,7 @@ public class Juego {
         this.jugador = jugador;
     }
 
-    // Inicia una nueva partida
+   
     public void iniciarPartida() {
         tablero.inicializarTablero();
         juego.getJugador().setPuntaje(0);
@@ -37,7 +37,7 @@ public class Juego {
         juego.setJuegoTerminado(false);
     }
 
-    // Procesa la selección de una carta
+    
     public void procesarSeleccion(JButton btn, int fila, int columna) {
 
         Modelo.Carta carta = tablero.obtenerCarta(fila, columna);
@@ -59,7 +59,7 @@ public class Juego {
         }
     }
 
-    // Verifica si las cartas seleccionadas forman una pareja
+    
     public void verificarPareja() {
 
         if (tablero.compararCartas(juego.getPrimeraCarta(), juego.getSegundaCarta())) {
@@ -76,14 +76,14 @@ public class Juego {
         finalizarJuego();
     }
 
-    // Actualiza la información del jugador
+    
     public void actualizarJugador(int puntos) {
 
         jugador.sumarPuntos(puntos);
 
     }
 
-    // Finaliza el juego cuando todas las parejas fueron encontradas
+    
     public void finalizarJuego() {
 
         if (tablero.juegoFinalizado()) {
@@ -93,7 +93,7 @@ public class Juego {
         }
     }
 
-    // Reinicia completamente el juego
+  
     public void reiniciarJuego() {
 
         iniciarPartida();
