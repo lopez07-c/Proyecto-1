@@ -4,7 +4,7 @@
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup2">
     </Component>
-    <Component class="javax.swing.JOptionPane" name="jOptionPane1">
+    <Component class="javax.swing.JOptionPane" name="confirmacionSalir">
       <Properties>
         <Property name="message" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="&quot;&#xbf;Seguro que desea salir?&quot;" type="code"/>

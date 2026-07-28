@@ -41,7 +41,7 @@ public class MenuJuego extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup2 = new javax.swing.ButtonGroup();
-        jOptionPane1 = new javax.swing.JOptionPane();
+        confirmacionSalir = new javax.swing.JOptionPane();
         jRadioButton4 = new javax.swing.JRadioButton();
         jRadioButton5 = new javax.swing.JRadioButton();
         jRadioButton6 = new javax.swing.JRadioButton();
@@ -50,9 +50,9 @@ public class MenuJuego extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         lblFondo = new javax.swing.JLabel();
 
-        jOptionPane1.setMessage("¿Seguro que desea salir?");
-        jOptionPane1.setMessageType(3);
-        jOptionPane1.setOptionType(0);
+        confirmacionSalir.setMessage("¿Seguro que desea salir?");
+        confirmacionSalir.setMessageType(3);
+        confirmacionSalir.setOptionType(0);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -158,10 +158,10 @@ Modelo.Nivel nivelSeleccionado = null;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JOptionPane confirmacionSalir;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JOptionPane jOptionPane1;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton6;
