@@ -5,7 +5,6 @@
 package Vista;
 
 import java.awt.Image;
-import java.awt.Menu;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;

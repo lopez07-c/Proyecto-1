@@ -4,6 +4,8 @@
  */
 package juego_memoria;
 
+import Vista.MenuJuego;
+
 /**
  *
  * @author UTN
