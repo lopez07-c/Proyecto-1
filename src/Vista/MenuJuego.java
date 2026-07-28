@@ -24,7 +24,7 @@ public class MenuJuego extends javax.swing.JFrame {
     public MenuJuego() {
         initComponents();
 
-        ImageIcon imagen = new ImageIcon(getClass().getResource("/Imagenes/Menu.jpeg"));
+        ImageIcon imagen = new ImageIcon(getClass().getResource("/Imagenes/Menu.jpg"));
        
         Icon Icono = new ImageIcon(imagen.getImage().getScaledInstance(lblFondo.getWidth(),  lblFondo.getHeight(), Image.SCALE_SMOOTH));
         lblFondo.setIcon(Icono);
