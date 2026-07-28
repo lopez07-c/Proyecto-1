@@ -5,12 +5,11 @@
 package Controlador;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import javax.swing.ImageIcon;
 
 /**
  *
- * @author ricar
+ * @author
  */
 public class Tablero {
 
@@ -20,35 +19,38 @@ public class Tablero {
         this.tableroModel = tablero;
     }
     
-    // Inicializa el tablero
     public void inicializarTablero() {
         tableroModel.setTablero(new Modelo.Carta[tableroModel.getFilas()][tableroModel.getColumnas()]);
         distribuirParejas();
     }
     
-    // Distribuye las parejas aleatoriamente
     public void distribuirParejas() {
         ArrayList<Modelo.Carta> listaCartas = new ArrayList<>();
         
-        // Crear las parejas
+
         for (int i = 1; i <= tableroModel.getTotalParejas(); i++) {
             ImageIcon imagen = new ImageIcon(getClass().getResource("/Imagenes/Img-" + i + ".png"));
             listaCartas.add(new Modelo.Carta(i, imagen));
             listaCartas.add(new Modelo.Carta(i, imagen));
         }
-        // Mezclar las cartas
-        Collections.shuffle(listaCartas);
-        int indice = 0;
-        // Colocar las cartas en la matriz
-        for (int f = 0; f < tableroModel.getFilas(); f++) {
-            for (int c = 0; c < tableroModel.getColumnas(); c++) {
-                tableroModel.getTablero()[f][c] = listaCartas.get(indice);
-                indice++;
-            }
-        }
+    for (int i = 0; i < listaCartas.size(); i++) {
+        int j = (int) (Math.random() * listaCartas.size());
+
+        Modelo.Carta temp = listaCartas.get(i);
+        listaCartas.set(i, listaCartas.get(j));
+        listaCartas.set(j, temp);
     }
 
-    // Obtiene una carta según su posición
+    int indice = 0;
+
+    for (int f = 0; f < tableroModel.getFilas(); f++) {
+        for (int c = 0; c < tableroModel.getColumnas(); c++) {
+            tableroModel.getTablero()[f][c] = listaCartas.get(indice);
+            indice++;
+        }
+    }
+    }
+
     public Modelo.Carta obtenerCarta(int fila, int columna) {
         if (fila >= 0 && fila < tableroModel.getFilas() && columna >= 0 && columna < tableroModel.getColumnas()) {
             return tableroModel.getTablero()[fila][columna];
@@ -56,7 +58,6 @@ public class Tablero {
         return null;
     }
 
-    // Compara dos cartas
     public boolean compararCartas(Modelo.Carta carta1, Modelo.Carta carta2) {
         if (carta1.getImagen().equals(carta2.getImagen())) {
             carta1.setEncontrada(true);
@@ -68,7 +69,6 @@ public class Tablero {
         return false;
     }
 
-    // Verifica si el juego terminó
     public boolean juegoFinalizado() {
         for (int f = 0; f < tableroModel.getFilas(); f++) {
             for (int c = 0; c < tableroModel.getColumnas(); c++) {
@@ -80,7 +80,6 @@ public class Tablero {
         return true;
     }
 
-    // Reinicia el tablero
     public void reiniciarTablero() {
         inicializarTablero();
     }
