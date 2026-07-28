@@ -14,7 +14,9 @@ public class JUEGO_MEMORIA {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        MenuJuego Menu = new MenuJuego();
+        Menu.setVisible(true);
+        Menu.setLocationRelativeTo(null);
     }
     
 }
